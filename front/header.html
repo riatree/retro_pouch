@@ -3,51 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        html, body, ol, dl, ul, dt, dd, li {
-            margin: 0; padding: 0;
-            list-style: none;
-        }
-
-
-        .hidden {
-            display: none; overflow: hidden;
-        }
-
-        .header-container {
-            width: 100%;
-            overflow: hidden;
-            background: #d5c9c8;
-        }
-
-        .header-menu.layout-menu {
-            overflow: hidden;
-        }
-
-        .header-menu dd {
-            float: left;
-
-        }
-
-
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="css/retropouch_header.css" rel="stylesheet">
 </head>
-<body>
+<body ondragstart='return false' onselectstart='return false' oncontextmenu='return false'>
     <header class="header-container layout-header">
         <h1 class="hidden">나의 오랜 화장품 보관소 : Retro Pouch</h1>
-        <dl class="header-menu layout-menu">
+        <dl class="rp-menubar layout-menubar">
             <dt class="hidden">Retro Pouch Logo</dt>
-            <dd><a href="#">Retro Pouch</a></dd>
+            <dd class="rp-menubar_logo rp-menu"><a href="/"><img src="media/imgs/main/logo.svg"></a></dd>
             <dt class="hidden">메뉴 버튼</dt>
-            <dd>
-                <ul>
-                    <li>PRODUCTS</li>
-                    <li>NOTICE</li>
+            <dd class="rp-menubar_box rp-menu">
+                <ul class="rp-menubar_menus">
+                    <li class="rp-menubar_menu menu_product"><a href="">PRODUCTS</a></li>
+                    <li class="rp-menubar_menu menu_notice"><a href="">NOTICE</a></li>
                 </ul>
             </dd>
-            <dt class="hidden">로그인 상자</dt>
-            <dd>LOGIN</dd>
+            <dt class="hidden">로그인 버튼</dt>
+            <dd class="rp-menubar_menu menu_login rp-menu"><a href="login.html">LOGIN</a></dd>
+            <!--<dt class="hidden">유저 정보</dt>
+            <dd class="rp-menubar_menu menu_login menu-user">
+                <div class="user-btn">nickname</div>
+                <ul class="user-info_box hidden">
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">나의 파우치</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </dd>-->
         </dl>
     </header>
+<script src="js/jquery.min.js"></script>
+<script src="js/retropouch_login.js"></script>
 </body>
 </html>

@@ -1,0 +1,79 @@
+html, body, ol, dl, ul, dt, dd, li, a {
+    margin: 0; padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: #333;
+}
+
+
+.hidden {
+    display: none; overflow: hidden;
+}
+
+.header-container {
+    width: 100%;
+    background: #d5c9c8;
+    font-family: 'Poppins';
+}
+
+.rp-menubar_logo {
+    margin-right: 5%;
+}
+
+.rp-menubar{
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+    position: relative;
+}
+
+.rp-menubar.layout-menubar, .rp-menubar_menus {
+    display: flex;
+}
+
+.rp-menubar>.rp-menu, .rp-menu .rp-menubar_menu{
+    float: left;
+    vertical-align: middle;
+}
+
+.rp-menubar_menus>.rp-menubar_menu {
+    margin-right: 20px;
+}
+
+.rp-menubar_menu {
+    width: 120px;
+    text-align: center;
+    font-size: 1.2em;
+}
+.menu_login {
+    position: absolute;
+    right: 0;
+    font-size: 1em;
+}
+
+.user-btn {
+    cursor: pointer;
+}
+
+.menu_login.menu-user>.user-info_box:after {
+    content: ""; display: block;
+    width: 0; height: 0;
+    position: absolute;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    top: 22px; left: 50%;
+}
+
+.menu_login.menu-user>.user-info_box {
+    background: rgba(255,255,255,0.8);
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.menu_login.menu-user>.user-info_box>li {
+    padding: 4px;
+}
