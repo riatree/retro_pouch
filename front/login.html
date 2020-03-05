@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인 &boxv; RETRO POUCH</title>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <style>
+        *, html, body, ul, dl, ol, dt, dd, li, a {
+            margin: 0; padding: 0;
+            text-decoration: none;
+            font-family: 'Do Hyeon';
+            list-style: none;
+            color: #444;
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        .hidden {
+            display: none;
+            overflow: hidden;
+        }
+        .main-container{
+            width: 100%;
+            padding: 10% 0;
+        }
+
+        .login-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 30px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+        }
+
+        .login-form, .btn-container {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .login-form .row {
+            border-bottom: 2px solid #adadad;
+            margin: 30px 0;
+            position: relative;
+            z-index: 0;
+        }
+
+        .row input {
+            font-size: 15px;
+            width: 100%;
+            border: none;
+            outline: none;
+            color: #444;
+            background: transparent;
+            padding: 0 5px;
+            height: 40px;
+        }
+
+        .row span::before{
+            content: attr(data-placeholder);
+            position: absolute;
+            top: 50%; left: 5px;
+            color: #adadad;
+            transform: translateY(-50%);
+            transition: .5s;
+            z-index: -1;
+        }
+
+        .row span::after{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(120deg, #d5c9c8, #d5c9c8);
+            transition: .5s;
+        }
+
+        .focus + span::before {
+            top: -5px;
+            color: #d5c9c8;
+        }
+        .focus + span::after {
+            width: 100%;
+        }
+
+        .login-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+            outline: none; border: none;
+            background: #d5c9c8;
+            font-size: 15px;
+            box-shadow: 1px 2px 5px 0 rgba(255, 255, 255, 0.16), 0 2px 8px 0 rgba(255, 255, 255, 0.12);
+            color: #333;
+        }
+
+        .btn-container .login-box li {
+            width: 100%; height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin: 10px 0;
+        }
+
+
+        .btn-container .user-info {
+            overflow: hidden;
+            margin: 20px 20px;
+            padding-top: 10px;
+        }
+
+        .btn-container .user-info li {
+            float: left;
+            width: 100px; height: 30px;
+            text-align: center;
+            margin-left: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<main class="main-container">
+    <div class="login-container">
+        <h2><a href="/"><img src="media/imgs/main/logo.svg"></a></h2>
+        <form class="login-form">
+            <fieldset>
+                <legend class="hidden">로그인 품</legend>
+                <p class="row">
+                    <input type="text" autocomplete="off" name="id" />
+                    <span data-placeholder="Username"></span>
+                </p>
+                <p class="row">
+                    <input type="password" name="password" />
+                    <span data-placeholder="Password"></span>
+                </p>
+                <input type="submit" class="login-btn" value="Login"/>
+            </fieldset>
+        </form>
+    </div>
+        <div class="btn-container">
+            <ul class="other login-box hidden">
+                <li>Google</li>
+                <li>FaceBook</li>
+                <li>Kakao</li>
+            </ul>
+            <ul class="find user-info">
+                <li><a href="">아이디 찾기</a></li>
+                <li><a href="">비밀번호 찾기</a></li>
+                <li><a href="">회원가입</a></li>
+            </ul>
+        </div>
+
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    let $input = $('.row>input');
+
+    $input.on("focus", function () {
+        $(this).addClass("focus");
+    });
+
+    $input.on("blur", function () {
+        if($(this).val().length === 0) {
+            $(this).removeClass("focus");
+        }
+    });
+</script>
+</body>
+</html>
