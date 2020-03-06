@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입&boxv;RETRO POUCH</title>
+    <link rel="shortcut icon" type="image/x-icon" href="media/imgs/main/retropouch.ico">
+</head>
+<body>
+<main class="main-container">
+    <h2>회원가입 페이지</h2>
+    <h3><img src="media/imgs/main/logo.svg"></h3>
+    <div class="join-container">
+        <form class="join-form">
+            <fieldset>
+                <legend>회원가입 폼</legend>
+                <p class="row">
+                    <input type="text" name="id"> @
+                    <input type="text" name="domain">
+                    <select>
+                        <option>직접 입력</option>
+                        <option>naver.com</option>
+                        <option>google.com</option>
+                        <option>daum.net</option>
+                    </select>
+                </p>
+                <p class="row">
+                    <input type="text" name="nickname">
+                </p>
+                <p class="row">
+                    <input type="password" name="password">
+                </p>
+                <p class="row">
+                    <input type="password">
+                </p>
+                <p class="row">
+                    <span>휴대전화 인증</span>
+                    <input type="button" class="phone-check" value="인증하기">
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</main>
+<script src="js/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript">
+    let $phone = $('.phone-check');
+
+    $phone.on("click", function () {
+        window.open("phone_verify.html","newWindow", "top=100%, left=500%, width=800, height=556, directories=no,location=no, menubar=no, resizable=no, status=no, toolbar=no");
+    });
+</script>
+</body>
+</html>
