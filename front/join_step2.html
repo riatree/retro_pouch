@@ -36,6 +36,8 @@
                     <span>휴대전화 인증</span>
                     <input type="button" class="phone-check" value="인증하기">
                 </p>
+                <button>취소</button>
+                <input type="submit" value="회원가입"/>
             </fieldset>
         </form>
     </div>
@@ -45,7 +47,7 @@
     let $phone = $('.phone-check');
 
     $phone.on("click", function () {
-        window.open("phone_verify.html","newWindow", "top=100%, left=500%, width=800, height=556, directories=no,location=no, menubar=no, resizable=no, status=no, toolbar=no");
+        window.open("phone_verify.html","newWindow", "top=100%, left=500%, width=500, height=650, directories=no,location=no, menubar=no, resizable=no, status=no, toolbar=no");
     });
 </script>
 </body>
