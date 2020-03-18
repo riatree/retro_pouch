@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>제품 &boxv; RETRO POUCH</title>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/30bf2daddd.js" crossorigin="anonymous"></script>
+    <style>
+        *, html, body, ul, dl, ol, dt, dd, li, a {
+            margin: 0; padding: 0;
+            text-decoration: none;
+            font-family: 'Do Hyeon';
+            list-style: none;
+            color: #444;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        fieldset {
+            border: none;
+        }
+
+        .hidden {
+            display: none;
+            overflow: hidden;
+        }
+        .main-container{
+            width:800px;
+            height: 100%;
+            padding: 10% 0;
+            position: absolute;
+            left: 50%;
+            margin-left: -400px;
+        }
+        .filter-container{
+            width: 800px;
+            height: 50px;
+            border: 1px solid #444444;
+            position: relative;
+        }
+        .filter-form{
+            width: 800px;
+            height: 50px;
+        }
+        .filter-option{
+            cursor: pointer;
+            line-height: 50px;
+            margin :auto 20px;
+        }
+        .board-container{
+            width: 800px;
+            position: relative;
+        }
+        .switch-container{
+            height: 30px;
+            margin: 10px auto;
+        }
+        .switch-container>div {
+            width: 30px;
+            float: right;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .switch-container>div>i {
+            font-size: 25px;
+            margin-left: 3px;
+            margin-top: 2px;
+        }
+        .board-view-style{
+            border: 2px solid #000000;
+        }
+        .board-none-style{
+            border: 2px solid transparent;
+        }
+        .box-container>li{
+            width: 48.7%;
+            height: 270px;
+            float: left;
+            background-color: transparent;
+            position: relative;
+            border: 5px solid transparent;
+        }
+        .box-container>li:hover{
+            border: 5px solid #000000;
+        }
+        .box-container>li>a>img{
+            width: 100%;
+            height: 200px;
+        }
+        .box-container>li>a>.product-box-name{
+            position: absolute;
+            left: 10px;
+            bottom: 40px;
+        }
+        .box-container>li>a>.product-box-price{
+            position: absolute;
+            right: 10px;
+            bottom: 40px;
+        }
+        .box-container>li>a>.product-box-explan{
+            position: absolute;
+            left: 10px;
+            bottom: 20px;
+        }
+        .list-container{
+            position: relative;
+        }
+        .list-container>li{
+            width: 100%;
+            height: 50px;
+            border: 1px solid #444444;
+            margin-bottom: 10px;
+        }
+        .list-container>li>p{
+            line-height: 50px;
+            margin-left: 10px;
+            float: left;
+        }
+        .product-list-name{
+            width: 150px;
+        }
+        .product-list-price{
+            width: 150px;
+            text-align: center;
+        }
+        .product-list-explan{
+            width: 450px;
+        }
+    </style>
+</head>
+<body>
+<main class="main-container">
+    <div class="filter-container">
+        <form class="filter-form">
+            <legend class="hidden">제품 필터 품</legend>
+            <span class="filter-option"><a href="#">ALL</a></span> |
+            <span class="filter-option"><a href="#">로션</a></span> |
+            <span class="filter-option"><a href="#">스킨</a></span> |
+            <span class="filter-option"><a href="#">에센스</a></span> |
+            <span class="filter-option"><a href="#">기타..</a></span>
+        </form>
+    </div>
+    <div class="board-container">
+        <div class="switch-container">
+            <div class="board-box board-view-style"><i class="fas fa-th-large"></i></div>
+            <div class="board-list board-none-style"><i class="fas fa-align-justify"></i></div>
+        </div>
+        <ul class="box-container">
+            <li>
+                <a href="#">
+                    <img src="img/losion.png">
+                    <span class="product-box-name">로션으로 보이나?</span>
+                    <span class="product-box-price">250ml / <i class="fas fa-won-sign"></i> 5000</span>
+                    <p class="product-box-explan">그냥 로션입니다</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/losion.png">
+                    <span class="product-box-name">로션으로 보이나?</span>
+                    <span class="product-box-price">150ml / <i class="fas fa-won-sign"></i> 10000</span>
+                    <p class="product-box-explan">사실 에센스입니다. 짜짜라잔 짜잔 아니던군요 사실 스킨입니다.</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/losion.png">
+                    <span class="product-box-name">로션으로 보이나?</span>
+                    <span class="product-box-price">250ml / <i class="fas fa-won-sign"></i> 5000</span>
+                    <p class="product-box-explan">그냥 로션입니다</p>
+                </a>
+            </li>
+        </ul>
+        <ul class="list-container hidden">
+            <li>
+                <p class="product-list-name"><a href="#">로션으로 보이나?</a></p>
+                <p class="product-list-price">250ml / <i class="fas fa-won-sign"></i> 5000</p>
+                <p class="product-list-explan">그냥 로션입니다</p>
+            </li>
+            <li>
+                <p class="product-list-name"><a href="#">로션으로 보이나?</a></p>
+                <p class="product-list-price">1000ml / <i class="fas fa-won-sign"></i> 7900</p>
+                <p class="product-list-explan">그냥 로션입니다</p>
+            </li>
+            <li>
+                <p class="product-list-name"><a href="#">로션으로 보이나?</a></p>
+                <p class="product-list-price">150ml / <i class="fas fa-won-sign"></i> 10000</p>
+                <p class="product-list-explan">사실 에센스입니다. 짜짜라잔 짜잔 아니던군요 사실 스킨입니다.</p>
+            </li>
+            <li>
+                <p class="product-list-name"><a href="#">로션으로 보이나?</a></p>
+                <p class="product-list-price">250ml / <i class="fas fa-won-sign"></i> 5000</p>
+                <p class="product-list-explan">그냥 로션입니다</p>
+            </li>
+        </ul>
+    </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    let $box = $('.board-box');
+    let $list =  $('.board-list');
+
+    let $boxCon = $('.box-container');
+    let $listCon =  $('.list-container');
+
+    $box.on("click", function () {
+        $boxCon.removeClass("hidden");
+        $listCon.addClass("hidden");
+
+        $box.addClass("board-view-style");
+        $list.removeClass("board-view-style");
+
+        $list.addClass("board-none-style");
+        $box.removeClass("board-none-style");
+
+    });
+
+    $list.on("click", function () {
+        $boxCon.addClass("hidden");
+        $listCon.removeClass("hidden");
+
+        $box.removeClass("board-view-style");
+        $list.addClass("board-view-style");
+
+        $box.addClass("board-none-style");
+        $list.removeClass("board-none-style");
+    });
+</script>
+</body>
+</html>
