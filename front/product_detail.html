@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="shortcut icon" type="image/x-icon" href="media/imgs/main/retropouch.ico">
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Poppins&display=swap" rel="stylesheet">
     <link href="css/retropouch_header.css" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/636ec94b33.js" crossorigin="anonymous"></script>
     <style type="text/css">
+        * , body{
+            font-family: 'Do Hyeon', sans-serif;
+        }
         .main-container {
             width: 100%;
-            font-family: 'Poppins';
+
         }
         .product-container {
             width: 1200px;
@@ -32,6 +35,7 @@
 
         .product_photos {
             width: 450px; height: 450px;
+            margin-right: 70px;
             overflow: hidden;
         }
 
@@ -41,13 +45,102 @@
             text-align: center;
         }
         .product_photo>img {
-            width: 430px; height: 450px;
+            width: 100%; height: 100%;
             margin: 0 auto;
+            background: #333333;
         }
 
         .product_info_box {
+            width: 400px;
         }
 
+        .product_info_list {
+            width: 100%; height: 100%;
+        }
+
+        .list > i {
+            font-size: .5em;
+            color: #888;
+        }
+        .list .label {
+            width: 80px;
+            padding: 5px 5px;
+            display: inline-block;
+            margin-right: 50px;
+            font-size: 0.8em;
+        }
+
+        .list .num_box {
+            border: 1px solid #999;
+            padding: 5px;
+        }
+
+        .num_box > input,.num_box > button {
+            background: none;
+            border: none;
+            margin: 0;
+            outline: none;
+        }
+
+        .num_box > button {
+            padding: 5px;
+            color: #999;
+            cursor: pointer;
+        }
+
+        .num_box > input {
+            width: 50px; height: 100%;
+            text-align: center;
+
+        }
+
+        .product_title_box {
+            width: 100%; height: 30px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .product_cost_box {
+            margin-bottom: 30px;
+            font-size: 1em;
+            font-family: 'Do Hyeon', sans-serif;
+        }
+
+        .product_total_box {
+            margin-top: 30px;
+            border-top: 1px solid #999;
+            border-bottom: 1px solid #999;
+            font-size: 1em;
+            padding: 15px 5px;
+            font-family: 'Do Hyeon', sans-serif;
+        }
+
+        .product_total_box .label {
+            margin-right: 200px;
+        }
+
+        .product_btn_box {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .product_btn_box .btn {
+            width: 49%; height: 40px;
+            font-size: .9em;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .btn.basket {
+            background: #d5c9c8;
+        }
+
+        .btn.buy {
+            background: rgba(9,9,9,0.2);
+        }
 
 
         /* 상품 정보 디테일 */
@@ -55,24 +148,44 @@
             width: 1020px;
             margin: 0 auto;
             padding: 10px 0;
-
         }
 
         .navigation-list {
+            margin-top: 30px;
+            border-top: 1px solid #999;
             width: 100%; height: 100%;
             overflow: hidden;
+            padding-top: 10px;
         }
 
         .navigation {
-            width: 23%; height: 30px;
+            width: 15%; height: 30px;
             padding: 10px;
             float: left;
             text-align: center;
             line-height: 30px;
+            font-size: .6em;
         }
 
+        .product_detail_box {
+            width: 100%; height: 800px;
+            background: #444444;
+        }
 
+        .product_review_box {
+            width: 100%; height: 400px;
+            background: #32405b;
+        }
 
+        .product_buyinfo_box {
+            width: 100%; height: 500px;
+            background: #d5c9c8;
+        }
+
+        .product_refund_box {
+            width: 100%; height: 800px;
+            background: blue;
+        }
     </style>
 </head>
 <body>
@@ -108,33 +221,53 @@
             <div class="empty-box"></div>
             <div class="product_photo_box layout-product">
                 <ul class="product_photos">
-                    <li class="product_photo"><img src="img/losion.png" alt=""/></li>
-                    <li class="product_photo"><img src="img/losion.png" alt=""/></li>
+                    <li class="product_photo"><img src="img/1f17021de63ec9d143ae416e7db952df.jpg" alt=""/></li>
                 </ul>
             </div>
 
             <div class="product_info_box layout-product">
-                <ul>
-                    <li><h3>제품명</h3></li>
-                    <li>판매가격</li>
-                    <li>배송정보</li>
-                    <li>판매수량</li>
-                    <li>총 상품금액</li>
-                    <li>버튼상자</li>
+                <ul class="product_info_list">
+                    <li class="product_title_box list"><h3>블랙보리 카밍 토너 140ml</h3></li>
+                    <li class="product_cost_box list"><span class="product_cost">13000</span> 원</li>
+                    <li class="product_delivery_box list">
+                        <i class="fas fa-check"></i>
+                        <span class="label">배송비</span>
+                        <span>2,500원</span>
+                    </li>
+                    <li class="product_num_box list">
+                        <i class="fas fa-check"></i>
+                        <span class="label">수량</span>
+                        <span class="num_box">
+                            <button class="minus_btn"><i class="fas fa-minus"></i></button>
+                            <input class="product_input" type="text" value="1"/>
+                            <button class="plus_btn"><i class="fas fa-plus"></i></button>
+                        </span>
+                    </li>
+                    <li class="product_total_box list">
+                        <span class="label">총 상품금액</span>
+                        <span class="total_money">0</span> 원
+                    </li>
+                    <li class="product_btn_box list">
+                        <input class="basket btn" type="button" value="장바구니">
+                        <input class="buy btn" type="button" value="바로구매">
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="product_detail layout-product_detail">
             <div class="navigation-container">
                 <ul class="navigation-list">
-                    <li class="navigation">상세정보</li>
-                    <li class="navigation">상품리뷰</li>
-                    <li class="navigation">구매정보</li>
+                    <li class="navigation"><a class="navi" href="#detailInfo">상세정보</a></li>
+                    <li class="navigation"><a class="navi" href="#review">상품리뷰</a></li>
+                    <li class="navigation"><a class="navi" href="#buyInfo">구매정보</a></li>
                     <li class="navigation">환불교환/상품고시</li>
                 </ul>
             </div>
             <div class="detail-container">
-
+                <div class="product_detail_box" id="detailInfo"></div>
+                <div class="product_review_box" id="review"></div>
+                <div class="product_buyinfo_box" id="buyInfo"></div>
+                <div class="product_refund_box"></div>
             </div>
 
         </div>
@@ -143,5 +276,76 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/retropouch_login.js"></script>
+<script type="text/javascript">
+    let $product_cost = $('.product_cost').text(),
+        $product_iuput = $('.product_input'),
+        $totalCost = $('.total_money');
+
+    let totalMoney = 0;
+
+    function sum_money() {
+        totalMoney = $product_cost * $product_iuput.val();
+        $totalCost.text(totalMoney);
+    }
+
+    sum_money();
+
+    let $plusBtn = $('.plus_btn'),
+        $minusBtn = $('.minus_btn');
+
+    let stockVal = 10;
+    let num = $product_iuput.val();
+
+    $plusBtn.on("click", function () {
+        if(stockVal > 0 ) {
+            if(stockVal > $product_iuput.val()) {
+                $product_iuput.val(++num);
+                sum_money();
+            } else {
+                alert("남은 재고값을 초과하였습니다.");
+                return false;
+            }
+        } else if (stockVal === 0) {
+            alert("해당 제품은 품절입니다.");
+            return false;
+        }
+    });
+
+    $minusBtn.on("click", function () {
+        if($product_iuput.val() > 1) {
+            $product_iuput.val(--num);
+            sum_money();
+        } else {
+            alert("최소 1개 이상 구입해주세요.");
+            return false;
+        }
+    });
+
+
+    $product_iuput.on("keyup", function () {
+        if(stockVal > 0 ) {
+            num = $product_iuput.val();
+            if(stockVal >= $product_iuput.val()) {
+                sum_money();
+            } else {
+                alert("남은 재고값을 초과하였습니다.");
+                return false;
+            }
+        } else if (stockVal === 0) {
+            alert("해당 제품은 품절입니다.");
+            return false;
+        }
+    });
+
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function ($) {
+        $('.navi').click(function (e) {
+            e.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        })
+    })
+</script>
 </body>
 </html>
