@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>구매내역 &boxv; RETRO POUCH</title>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/30bf2daddd.js" crossorigin="anonymous"></script>
+    <style>
+        *, html, body, ul, dl, ol, dt, dd, li, a {
+            margin: 0; padding: 0;
+            text-decoration: none;
+            font-family: 'Do Hyeon';
+            list-style: none;
+            color: #444;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        fieldset {
+            border: none;
+        }
+        .hidden {
+            display: none;
+            overflow: hidden;
+        }
+        .menu-container{
+            width: 100px;
+            height: 300px;
+            position: fixed;
+            left: 50%;
+            margin-left: -48%;
+            margin-top: -10%;
+            padding: 10% 0;
+        }
+        .menu-container>ul>li{
+            margin-bottom: 10px;
+        }
+        .menu-container>ul>li>a{
+            width: 100px;
+            height: 50px;
+            background-color: coral;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        .menu-container>ul>li>a:hover{
+            background-color: #B45F04;
+        }
+        .menu-container>ul>li>a>span{
+            margin-left: 10px;
+        }
+        .main-container{
+            width:800px;
+            height: 100%;
+            padding: 10% 0;
+            position: absolute;
+            left: 50%;
+            margin-left: -400px;
+        }
+        .purchase-container{
+            border-top: 1px solid #444444;
+            border-collapse: collapse;
+        }
+        th,td {
+            border-bottom: 1px solid #444444;
+            padding: 10px;
+        }
+        .purchase-date{
+            width: 100px;
+        }
+        .purchase-info{
+            width: 500px;
+            position: relative;
+        }
+        .purchase-info>img{
+            width: 100px;
+            height: 100px;
+        }
+        .product-name{
+            position: absolute;
+            top: 5px;
+            margin-left: 10px;
+            width: 330px;
+        }
+        .product-count{
+            position: absolute;
+            top: 30px;
+            margin-left: 10px;
+            width: 330px;
+        }
+        .product-price{
+            position: absolute;
+            top: 60px;
+            margin-left: 10px;
+            width: 330px;
+        }
+        .purchase-state{
+            width: 100px;
+            text-align: center;
+        }
+        .purchase-etc{
+            width: 100px;
+        }
+        .purchase-etc>button{
+            float: left;
+            padding: 5px;
+            width: 60px;
+            text-align: center;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<main class="main-container">
+    <h1>구매내역</h1>
+    <div class="menu-container">
+        <ul>
+            <li>
+                <a href="#"><span>장바구니</span></a>
+            </li>
+            <li>
+                <a href="#"><span>구매내역</span></a>
+            </li>
+            <li>
+                <a href="#"><span>비밀번호 수정</span></a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <table class="purchase-container">
+            <thead>
+                <th class="purchase-date">날짜</th>
+                <th class="purchase-info">상품 정보</th>
+                <th class="purchase-state">상태</th>
+                <th class="purchase-etc">비고</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="purchase-date">2020-03-29</td>
+                    <td class="purchase-info">
+                        <img src="img/losion.png"/>
+                        <span class="product-name"><a href="#">로션1</a></span>
+                        <span class="product-count">수량 : 1개</span>
+                        <span class="product-price">5000원</span>
+                    </td>
+                    <td class="purchase-state">
+                        <span>결제 대기중</span>
+                    </td>
+                    <td class="purchase-etc">
+                        <button>환불 요청</button>
+                        <button>교환</button>
+                        <button>리뷰 작성</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="purchase-date">2020-03-29</td>
+                    <td class="purchase-info">
+                        <img src="img/losion.png"/>
+                        <span class="product-name"><a href="#">로션1</a></span>
+                        <span class="product-count">수량 : 1개</span>
+                        <span class="product-price">5000원</span>
+                    </td>
+                    <td class="purchase-state">
+                        <span>배송대기</span>
+                    </td>
+                    <td class="purchase-etc">
+                        <button>환불 요청</button>
+                        <button>교환</button>
+                        <button>리뷰 작성</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="purchase-date">2020-03-29</td>
+                    <td class="purchase-info">
+                        <img src="img/losion.png"/>
+                        <span class="product-name"><a href="#">로션1</a></span>
+                        <span class="product-count">수량 : 1개</span>
+                        <span class="product-price">5000원</span>
+                    </td>
+                    <td class="purchase-state">
+                        <span>배송중</span>
+                    </td>
+                    <td class="purchase-etc">
+                        <button>환불 요청</button>
+                        <button>교환</button>
+                        <button>리뷰 작성</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="purchase-date">2020-03-29</td>
+                    <td class="purchase-info">
+                        <img src="img/losion.png"/>
+                        <span class="product-name"><a href="#">로션1</a></span>
+                        <span class="product-count">수량 : 1개</span>
+                        <span class="product-price">5000원</span>
+                    </td>
+                    <td class="purchase-state">
+                        <span>배송완료</span>
+                    </td>
+                    <td class="purchase-etc">
+                        <button>환불 요청</button>
+                        <button>교환</button>
+                        <button>리뷰 작성</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

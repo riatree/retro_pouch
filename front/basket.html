@@ -35,6 +35,31 @@
             border-radius: 25px;
             ext-decoration: none;
         }
+        .menu-container{
+            width: 100px;
+            height: 300px;
+            position: fixed;
+            left: 50%;
+            margin-left: -48%;
+            margin-top: -10%;
+            padding: 10% 0;
+        }
+        .menu-container>ul>li{
+            margin-bottom: 10px;
+        }
+        .menu-container>ul>li>a{
+            width: 100px;
+            height: 50px;
+            background-color: coral;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        .menu-container>ul>li>a:hover{
+            background-color: #B45F04;
+        }
+        .menu-container>ul>li>a>span{
+            margin-left: 10px;
+        }
         .main-container{
             width:800px;
             height: 100%;
@@ -130,6 +155,19 @@
 <body>
 <main class="main-container">
     <h1>장바구니</h1>
+    <div class="menu-container">
+        <ul>
+            <li>
+                <a href="#"><span>장바구니</span></a>
+            </li>
+            <li>
+                <a href="#"><span>구매내역</span></a>
+            </li>
+            <li>
+                <a href="#"><span>비밀번호 수정</span></a>
+            </li>
+        </ul>
+    </div>
     <div class="basket-container">
         <p>
             <span>전체</span>
