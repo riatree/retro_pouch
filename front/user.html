@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>비밀번호 변경 &boxv; RETRO POUCH</title>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/30bf2daddd.js" crossorigin="anonymous"></script>
+    <style>
+        *, html, body, ul, dl, ol, dt, dd, li, a {
+            margin: 0; padding: 0;
+            text-decoration: none;
+            font-family: 'Do Hyeon';
+            list-style: none;
+            color: #444;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        fieldset {
+            border: none;
+        }
+        .hidden {
+            display: none;
+            overflow: hidden;
+        }
+        .menu-container{
+            width: 100px;
+            height: 300px;
+            position: fixed;
+            left: 50%;
+            margin-left: -48%;
+            margin-top: -10%;
+            padding: 10% 0;
+        }
+        .menu-container>ul>li{
+            margin-bottom: 10px;
+        }
+        .menu-container>ul>li>a{
+            width: 100px;
+            height: 50px;
+            background-color: coral;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        .menu-container>ul>li>a:hover{
+            background-color: #B45F04;
+        }
+        .menu-container>ul>li>a>span{
+            margin-left: 10px;
+        }
+        .main-container{
+            width:800px;
+            height: 100%;
+            padding: 10% 0;
+            position: absolute;
+            left: 50%;
+            margin-left: -400px;
+        }
+        .pwd-container{
+            border: 1px solid #444444;
+            padding: 20px;
+        }
+        form-input {
+            width: 140px;
+        }
+        .pwd-update-btn{
+            width: 140px;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<main class="main-container">
+    <h1>비밀번호 변경</h1>
+    <div class="menu-container">
+        <ul>
+            <li>
+                <a href="#"><span>장바구니</span></a>
+            </li>
+            <li>
+                <a href="#"><span>구매내역</span></a>
+            </li>
+            <li>
+                <a href="#"><span>비밀번호 수정</span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="pwd-container">
+        <form class="form-container">
+            <p>현재 비빌번호</p>
+            <input class="form-input" name="now-pwd" type="password"/>
+            <p>새로운 비빌번호</p>
+            <input class="form-input" name="new-pwd" type="password"/>
+            <p>비빌번호 확인</p>
+            <input class="form-input" name="new-pwd-confirm" type="password"/><br/>
+            <input class="pwd-update-btn" type="submit" value="변경">
+        </form>
+    </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
