@@ -30,10 +30,6 @@
             width: 100px;
             height: 300px;
             position: fixed;
-            left: 50%;
-            margin-left: -48%;
-            margin-top: -10%;
-            padding: 10% 0;
         }
         .menu-container>ul>li{
             margin-bottom: 10px;
@@ -52,14 +48,23 @@
             margin-left: 10px;
         }
         .main-container{
-            width:800px;
+            width:960px;
             height: 100%;
             padding: 10% 0;
             position: absolute;
             left: 50%;
-            margin-left: -400px;
+            margin-left: -480px;
+        }
+        .main-title{
+            margin-left: 120px;
         }
         .purchase-container{
+            width:800px;
+            height: auto;
+            position: absolute;
+            right: 40px;
+        }
+        .purchase-table{
             border-top: 1px solid #444444;
             border-collapse: collapse;
         }
@@ -114,7 +119,7 @@
 </head>
 <body>
 <main class="main-container">
-    <h1>구매내역</h1>
+    <h1 class="main-title">구매내역</h1>
     <div class="menu-container">
         <ul>
             <li>
@@ -128,8 +133,8 @@
             </li>
         </ul>
     </div>
-    <div>
-        <table class="purchase-container">
+    <div class="purchase-container">
+        <table class="purchase-table">
             <thead>
                 <th class="purchase-date">날짜</th>
                 <th class="purchase-info">상품 정보</th>

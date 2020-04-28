@@ -39,10 +39,6 @@
             width: 100px;
             height: 300px;
             position: fixed;
-            left: 50%;
-            margin-left: -48%;
-            margin-top: -10%;
-            padding: 10% 0;
         }
         .menu-container>ul>li{
             margin-bottom: 10px;
@@ -61,12 +57,22 @@
             margin-left: 10px;
         }
         .main-container{
-            width:800px;
+            width:1180px;
             height: 100%;
             padding: 10% 0;
             position: absolute;
             left: 50%;
-            margin-left: -400px;
+            margin-left: -590px;
+        }
+        .main-title{
+            margin-left: 120px;
+        }
+        .basket-container{
+            width:800px;
+            height: auto;
+            position: absolute;
+            right: 0;
+            left: 120px;
         }
         .product-list>li {
             height: 120px;
@@ -126,11 +132,10 @@
         .sale-container{
             width: 200px;
             height: 220px;
-            position: fixed;
             border: 1px solid #444444;
-            top: 240px;
-            left: 78%;
             padding: 10px;
+            position: absolute;
+            right: 20px;
         }
         .sale-container>form>fieldset{
             font-size: 25px;
@@ -154,7 +159,7 @@
 </head>
 <body>
 <main class="main-container">
-    <h1>장바구니</h1>
+    <h1 class="main-title">장바구니</h1>
     <div class="menu-container">
         <ul>
             <li>

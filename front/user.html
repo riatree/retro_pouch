@@ -29,11 +29,8 @@
         .menu-container{
             width: 100px;
             height: 300px;
-            position: fixed;
-            left: 50%;
-            margin-left: -48%;
-            margin-top: -10%;
-            padding: 10% 0;
+           position: fixed;
+
         }
         .menu-container>ul>li{
             margin-bottom: 10px;
@@ -52,12 +49,22 @@
             margin-left: 10px;
         }
         .main-container{
-            width:800px;
+            width:960px;
             height: 100%;
             padding: 10% 0;
             position: absolute;
             left: 50%;
-            margin-left: -400px;
+            margin-left: -480px;
+        }
+        .main-title{
+            margin-left: 120px;
+        }
+        .pwd-container{
+            width:800px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 150px;
         }
         .pwd-container{
             border: 1px solid #444444;
@@ -75,7 +82,7 @@
 </head>
 <body>
 <main class="main-container">
-    <h1>비밀번호 변경</h1>
+    <h1 class="main-title">비밀번호 변경</h1>
     <div class="menu-container">
         <ul>
             <li>
