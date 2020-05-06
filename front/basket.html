@@ -36,43 +36,37 @@
             ext-decoration: none;
         }
         .menu-container{
-            width: 100px;
-            height: 300px;
-            position: fixed;
+            width: 800px;
+            height: 50px;
         }
         .menu-container>ul>li{
-            margin-bottom: 10px;
+            float: left;
         }
         .menu-container>ul>li>a{
-            width: 100px;
+            width: 150px;
             height: 50px;
-            background-color: coral;
+            background-color: #0489B1;
             display: inline-block;
-            border-radius: 5px;
+            text-align: center;
+            line-height: 50px;
+            color: #d5c9c8;
         }
         .menu-container>ul>li>a:hover{
-            background-color: #B45F04;
-        }
-        .menu-container>ul>li>a>span{
-            margin-left: 10px;
+            background-color: #0B4C5F;
+            color: white;
         }
         .main-container{
-            width:1180px;
+            width:1080px;
             height: 100%;
             padding: 10% 0;
             position: absolute;
             left: 50%;
             margin-left: -590px;
         }
-        .main-title{
-            margin-left: 120px;
-        }
         .basket-container{
             width:800px;
             height: auto;
             position: absolute;
-            right: 0;
-            left: 120px;
         }
         .product-list>li {
             height: 120px;
@@ -159,20 +153,20 @@
 </head>
 <body>
 <main class="main-container">
-    <h1 class="main-title">장바구니</h1>
     <div class="menu-container">
         <ul>
             <li>
-                <a href="#"><span>장바구니</span></a>
+                <a href="#">장바구니</a>
             </li>
             <li>
-                <a href="#"><span>구매내역</span></a>
+                <a href="#">구매내역</a>
             </li>
             <li>
-                <a href="#"><span>비밀번호 수정</span></a>
+                <a href="#">비밀번호 수정</a>
             </li>
         </ul>
     </div>
+    <h1 class="main-title">장바구니</h1>
     <div class="basket-container">
         <p>
             <span>전체</span>

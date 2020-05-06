@@ -27,26 +27,24 @@
             overflow: hidden;
         }
         .menu-container{
-            width: 100px;
-            height: 300px;
-           position: fixed;
-
+            width: 800px;
+            height: 50px;
         }
         .menu-container>ul>li{
-            margin-bottom: 10px;
+            float: left;
         }
         .menu-container>ul>li>a{
-            width: 100px;
+            width: 150px;
             height: 50px;
-            background-color: coral;
+            background-color: #0489B1;
             display: inline-block;
-            border-radius: 5px;
+            text-align: center;
+            line-height: 50px;
+            color: #d5c9c8;
         }
         .menu-container>ul>li>a:hover{
-            background-color: #B45F04;
-        }
-        .menu-container>ul>li>a>span{
-            margin-left: 10px;
+            background-color: #0B4C5F;
+            color: white;
         }
         .main-container{
             width:960px;
@@ -56,18 +54,11 @@
             left: 50%;
             margin-left: -480px;
         }
-        .main-title{
-            margin-left: 120px;
-        }
         .pwd-container{
             width:800px;
             height: 100%;
-            position: absolute;
-            right: 0;
-            top: 150px;
         }
         .pwd-container{
-            border: 1px solid #444444;
             padding: 20px;
         }
         form-input {
@@ -82,20 +73,20 @@
 </head>
 <body>
 <main class="main-container">
-    <h1 class="main-title">비밀번호 변경</h1>
     <div class="menu-container">
         <ul>
             <li>
-                <a href="#"><span>장바구니</span></a>
+                <a href="#">장바구니</a>
             </li>
             <li>
-                <a href="#"><span>구매내역</span></a>
+                <a href="#">구매내역</a>
             </li>
             <li>
-                <a href="#"><span>비밀번호 수정</span></a>
+                <a href="#">비밀번호 수정</a>
             </li>
         </ul>
     </div>
+    <h1 class="main-title">비밀번호 변경</h1>
     <div class="pwd-container">
         <form class="form-container">
             <p>현재 비빌번호</p>
