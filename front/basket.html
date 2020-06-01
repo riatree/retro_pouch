@@ -35,13 +35,38 @@
             border-radius: 25px;
             ext-decoration: none;
         }
+        .menu-container{
+            width: 800px;
+            height: 50px;
+        }
+        .menu-container>ul>li{
+            float: left;
+        }
+        .menu-container>ul>li>a{
+            width: 150px;
+            height: 50px;
+            background-color: #0489B1;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            color: #d5c9c8;
+        }
+        .menu-container>ul>li>a:hover{
+            background-color: #0B4C5F;
+            color: white;
+        }
         .main-container{
-            width:800px;
+            width:1080px;
             height: 100%;
             padding: 10% 0;
             position: absolute;
             left: 50%;
-            margin-left: -400px;
+            margin-left: -590px;
+        }
+        .basket-container{
+            width:800px;
+            height: auto;
+            position: absolute;
         }
         .product-list>li {
             height: 120px;
@@ -101,11 +126,10 @@
         .sale-container{
             width: 200px;
             height: 220px;
-            position: fixed;
             border: 1px solid #444444;
-            top: 240px;
-            left: 78%;
             padding: 10px;
+            position: absolute;
+            right: 20px;
         }
         .sale-container>form>fieldset{
             font-size: 25px;
@@ -129,7 +153,20 @@
 </head>
 <body>
 <main class="main-container">
-    <h1>장바구니</h1>
+    <div class="menu-container">
+        <ul>
+            <li>
+                <a href="#">장바구니</a>
+            </li>
+            <li>
+                <a href="#">구매내역</a>
+            </li>
+            <li>
+                <a href="#">비밀번호 수정</a>
+            </li>
+        </ul>
+    </div>
+    <h1 class="main-title">장바구니</h1>
     <div class="basket-container">
         <p>
             <span>전체</span>
