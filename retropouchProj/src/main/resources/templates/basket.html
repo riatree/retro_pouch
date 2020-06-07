@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>장바구니 &boxv; RETRO POUCH</title>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/30bf2daddd.js" crossorigin="anonymous"></script>
+    <style>
+        *, html, body, ul, dl, ol, dt, dd, li, a {
+            margin: 0; padding: 0;
+            text-decoration: none;
+            font-family: 'Do Hyeon';
+            list-style: none;
+            color: #444;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        fieldset {
+            border: none;
+        }
+        input {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #bcbcbc;
+            cursor: pointer;
+        }
+        button {
+            width: 25px;
+            height: 25px;
+            border-radius: 25px;
+            ext-decoration: none;
+        }
+        .menu-container{
+            width: 800px;
+            height: 50px;
+        }
+        .menu-container>ul>li{
+            float: left;
+        }
+        .menu-container>ul>li>a{
+            width: 150px;
+            height: 50px;
+            background-color: #0489B1;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            color: #d5c9c8;
+        }
+        .menu-container>ul>li>a:hover{
+            background-color: #0B4C5F;
+            color: white;
+        }
+        .main-container{
+            width:1080px;
+            height: 100%;
+            padding: 10% 0;
+            position: absolute;
+            left: 50%;
+            margin-left: -590px;
+        }
+        .basket-container{
+            width:800px;
+            height: auto;
+            position: absolute;
+        }
+        .product-list>li {
+            height: 120px;
+            border: 1px solid #444444;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .product-list>li>input {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .product-list>li>img {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 10px;
+            left: 50px;
+        }
+        .product-config{
+            position: absolute;
+            left: 160px;
+            top: 20px;
+        }
+        .product-config>li{
+            float: left;
+            margin-right: 20px;
+        }
+        .product-config-name{
+            width: 200px;
+        }
+        .product-value{
+            font-size: 25px;
+            text-align: center;
+        }
+        .product-price-total{
+            background-color: #d5c9c8;
+            position: absolute;
+            width: 640px;
+            bottom: 0;
+            right: 0;
+            border-top: 1px solid #444444;
+        }
+        .product-price-total>li{
+            float: left;
+            width: 100px;
+            height: 60px;
+            margin: auto 10px;
+        }
+        .product-price-total>li>i{
+          line-height: 60px;
+        }
+        .product-price-title{
+            text-align: center;
+
+        }
+        .sale-container{
+            width: 200px;
+            height: 220px;
+            border: 1px solid #444444;
+            padding: 10px;
+            position: absolute;
+            right: 20px;
+        }
+        .sale-container>form>fieldset{
+            font-size: 25px;
+        }
+        .sale-container>form>label{
+            font-size: 15px;
+            color: #bcbcbc;
+        }
+        .sale-num{
+            text-align: right;
+            margin-right: 10px;
+        }
+        .sale-btn{
+            width: 90%;
+            margin: auto;
+            position: absolute;
+            bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<main class="main-container">
+    <div class="menu-container">
+        <ul>
+            <li>
+                <a href="#">장바구니</a>
+            </li>
+            <li>
+                <a href="#">구매내역</a>
+            </li>
+            <li>
+                <a href="#">비밀번호 수정</a>
+            </li>
+        </ul>
+    </div>
+    <h1 class="main-title">장바구니</h1>
+    <div class="basket-container">
+        <p>
+            <span>전체</span>
+            <label>3</label>
+        </p>
+        <p>
+            <input type="checkbox" class="basket-all"/>
+            <label>전체 선택</label>
+        </p>
+        <ul class="product-list">
+            <li>
+                <input type="checkbox" class="basket"/>
+                <img src="img/losion.png"/>
+
+                <ul class="product-config">
+                    <li>
+                        <p class="product-config-name"><a href="#">로션1</a></p>
+                    </li>
+                   <li>
+                       <span class="price">5000</span>원
+                       <span>주문 갯수 : </span>
+                       <input name="product-count" value="1"/>개
+                   </li>
+                    <li>
+                        <button><i class="fas fa-times"></i></button>
+                    </li>
+                </ul>
+                <ul class="product-price-total">
+                    <li>
+                        <p class="product-price-title">상품 가격</p>
+                        <p class="product-value product-price">5000</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-plus"></i>
+                    </li>
+                    <li>
+                        <p class="product-price-title">배송비</p>
+                        <p class="product-value  delivery-price">3000</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-equals"></i>
+                    </li>
+                    <li>
+                        <p class="product-price-title">주문 금액(원)</p>
+                        <p class="product-value product-price-final">8000</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" class="basket"/>
+                <img src="img/losion.png"/>
+
+                <ul class="product-config">
+                    <li>
+                        <p class="product-config-name"><a href="#">로션2 입니다</a></p>
+                    </li>
+                    <li>
+                        <span class="price">4900</span>원
+                        <span>주문 갯수 : </span>
+                        <input name="product-count" value="1"/>개
+                    </li>
+                    <li>
+                        <button><i class="fas fa-times"></i></button>
+                    </li>
+                </ul>
+                <ul class="product-price-total">
+                    <li>
+                        <p class="product-price-title">상품 가격</p>
+                        <p class="product-value product-price">4900</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-plus"></i>
+                    </li>
+                    <li>
+                        <p class="product-price-title">배송비</p>
+                        <p class="product-value delivery-price">5000</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-equals"></i>
+                    </li>
+                    <li>
+                        <p class="product-price-title">주문 금액(원)</p>
+                        <p class="product-value product-price-final">9900</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" class="basket"/>
+                <img src="img/losion.png"/>
+
+                <ul class="product-config">
+                    <li>
+                        <p class="product-config-name"><a href="#">로션3</a></p>
+                    </li>
+                    <li>
+                        <span class="price">5000</span>원
+                        <span>주문 갯수 : </span>
+                        <input name="product-count" value="1"/>개
+                    </li>
+                    <li>
+                        <button><i class="fas fa-times"></i></button>
+                    </li>
+                </ul>
+                <ul class="product-price-total">
+                    <li>
+                        <p class="product-price-title">상품 가격</p>
+                        <p class="product-value product-price">5000</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-plus"></i>
+                    </li>
+                    <li>
+                        <p class="product-price-title">배송비</p>
+                        <p class="product-value  delivery-price">3000</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-equals"></i>
+                    </li>
+                    <li>
+                        <p class="product-price-title">주문 금액(원)</p>
+                        <p class="product-value product-price-final">8000</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="sale-container">
+        <form>
+            <fieldset>전체 합계</fieldset>
+
+            <label>총 상품 금액</label>
+            <p class="sale-num product-all-price">5000</p>
+            <label>총 배송비</label>
+            <p class="sale-num product-all-deliver">5000</p>
+            <p>--------------------------</p>
+            <label>결제 예정금액</label>
+            <p class="sale-num product-all-sale">5000</p>
+            <input class="sale-btn" type="submit" value="주문하기"/>
+        </form>
+    </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    //상품 전체 선택 취초
+    $checkboxAll =  $('.basket-all');
+    $checkbox =  $('.basket');
+
+    $checkboxAll.on("click", function () {
+        $checkbox.prop( 'checked', this.checked );
+        salePage();
+    });
+
+    //상품 가격 조정
+    $productPriceTotal =  $('.product-price-total');
+
+    $(document).on("change", 'input', function () {
+        // 가격과 갯수 값 가져오기
+        let count = $(this).val();
+        //console.log("갯수 : " + count);
+        let price = $(this).parent().find('.price').text();
+        //console.log("가격 : " + price);
+        let priceTotal = 0;
+        priceTotal = count*price;
+        //console.log("총 가격 : " + priceTotal);
+        //상품 가격 변경
+        $(this).parent().parent().next().find('.product-price').text(priceTotal);
+
+        //주문 금액 변경
+        let deliveryPrice =0;
+        deliveryPrice =$(this).parent().parent().next().find('.delivery-price').text();
+        //console.log("총 가격 : " + deliveryPrice);
+        let salePrice = 0;
+        salePrice = Number(priceTotal) + Number(deliveryPrice);
+
+        //console.log("총 가격 : " + salePrice);
+        $(this).parent().parent().next().find('.product-price-final').text(salePrice);
+    });
+
+    //결제 창
+    $productList=  $('.product-list');
+
+    function salePage() {
+        //체크된 총 상품 가격
+        let price = 0;
+        let deliver = 0;
+        let totalPrice = 0;
+
+            //제품 갯수
+        let length = $productList.children().length;
+        //console.log("제품 갯수: "+length);
+        for(let i=0;i<length;i++){
+            if($productList.children().eq(i).children('input').is(":checked")){
+                price += Number($productList.children().eq(i).find('.product-price').text());
+            }
+        }
+        //console.log("총 상품가격 : "+price);
+        $('.product-all-price').text(price);
+
+        //체크된 총 배송비
+        for(let i=0;i<length;i++){
+            if($productList.children().eq(i).children('input').is(":checked")){
+                deliver += Number($productList.children().eq(i).find('.delivery-price').text());
+            }
+        }
+        //console.log("총 배달비 : "+deliver);
+        $('.product-all-deliver').text(deliver);
+        //총 결제금액
+        totalPrice = price + deliver;
+        $('.product-all-sale').text(totalPrice);
+    }
+    salePage();
+    //input 에 변화가 있을 시
+    $('input').on("propertychange change keyup paste input", function() {
+        salePage();
+    });
+
+
+</script>
+</body>
+</html>

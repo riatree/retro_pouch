@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>주문서 &boxv; RETRO POUCH</title>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/30bf2daddd.js" crossorigin="anonymous"></script>
+    <style>
+        *, html, body, ul, dl, ol, dt, dd, li, a {
+            margin: 0; padding: 0;
+            text-decoration: none;
+            font-family: 'Do Hyeon';
+            list-style: none;
+            color: #444;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        fieldset {
+            border: none;
+        }
+        input {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #bcbcbc;
+            cursor: pointer;
+        }
+        button {
+            width: 25px;
+            height: 25px;
+            border-radius: 25px;
+            ext-decoration: none;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        .main-container{
+            width:800px;
+            height: 100%;
+            padding: 10% 0;
+            position: absolute;
+            left: 50%;
+            margin-left: -400px;
+        }
+        .main-title{
+            text-align: center;
+            font-size: 30px;
+        }
+        .payment-container{
+
+        }
+        .payment-table{
+            border-top: 1px solid #444444;
+            border-collapse: collapse;
+        }
+        .payment-table>tr>td,th{
+            text-align: center;
+        }
+        th,td {
+            border-bottom: 1px solid #444444;
+            padding: 10px;
+        }
+        .payment-price{
+            text-align: right;
+            margin-right: 10px;
+        }
+        .user-container{
+            float: right;
+        }
+        .user-table{
+            border-top: 1px solid #444444;
+            border-collapse: collapse;
+        }
+        .user-table>tr>td{
+           text-align: right;
+        }
+        .user-config{
+            width: 200px;
+        }
+        .address-config{
+            width: 300px;
+        }
+        .cost-container{
+            width: 200px;
+            height: 320px;
+            border: 1px solid #444444;
+            padding: 10px;
+            position: relative;
+        }
+        .cost-container>form>fieldset{
+            font-size: 25px;
+        }
+        .cost-container>form>label{
+            font-size: 15px;
+            color: #bcbcbc;
+        }
+        .cost-num{
+            text-align: right;
+            margin-right: 10px;
+        }
+        .cost-btn{
+            width: 90%;
+            height: 10%;
+            margin: 10px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<main class="main-container">
+    <h1 class="main-title">주문서</h1>
+    <div class="payment-container">
+        <h2>결제 정보</h2>
+        <table class="payment-table">
+            <tr>
+                <th style="width: 110px"></th>
+                <th style="width: 200px">상품명</th>
+                <th style="width: 110px">가격</th>
+                <th style="width: 50px">수량</th>
+                <th style="width: 110px">배달금액</th>
+                <th style="width: 110px">총금액</th>
+            </tr>
+            <tr>
+                <td><a href="#">
+                        <img src="img/losion.png">
+                    </a>
+                </td>
+                <td><a href="#">
+                    로션 100ml+사은품 있으련지
+                    </a>
+                </td>
+                <td>10000</td>
+                <td>1</td>
+                <td>2500</td>
+                <td>12500</td>
+            </tr>
+            <tr>
+                <td><a href="#">
+                    <img src="img/losion.png">
+                </a>
+                </td>
+                <td><a href="#">
+                    샴푸 200ml+사은품 있으련지
+                </a>
+                </td>
+                <td>9000</td>
+                <td>1</td>
+                <td>2500</td>
+                <td>11500</td>
+            </tr>
+        </table>
+        <h2 class="payment-price">총 결제 대기 금액 : <span>24000</span>원</h2>
+    </div>
+    <div class="config-container">
+        <div class="user-container">
+            <h2>주문자 정보</h2>
+            <table class="user-table">
+                <tr>
+                    <th>주문하시는분</th>
+                    <td>
+                        <input class="user-config" value="하재훈"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>연락처</th>
+                    <td>
+                        <input class="user-config" value="01033334444"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td>
+                        <input class="user-config" value="hoon111465@gmail.com"/>
+                        <input type="checkbox" checked  name="sms-value" value="Y" />주문관련 SMS를 수신에 동의합니다
+                    </td>
+                </tr>
+                <tr>
+                    <th>배송지</th>
+                    <td>
+                        <input class="address-config" value="점점도 땡땡시 하수구 케로로 147 XXX동 XXXX호"/>
+                        <input type="checkbox" checked  name="address-value" value="Y" />주문인 정보와 동일함
+                    </td>
+                </tr>
+                <tr>
+                    <th>전화번호</th>
+                    <td>
+                        <input class="user-config" value="01011112222"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="cost-container">
+            <form>
+                <fieldset>결제 정보</fieldset>
+
+                <label>총 상품 금액</label>
+                <p class="cost-num product-all-price">5000</p>
+                <label>총 배송비</label>
+                <p class="cost-num product-all-deliver">5000</p>
+                <p>--------------------------</p>
+                <label>결제 예정금액</label>
+                <p class="cost-num product-all-sale">5000</p>
+                <p>--------------------------</p>
+                <label>결제 수단</label><br>
+                <label><input type="radio" name="payment" value="kakao" checked />카카오페이</label><br>
+                <label><input name="payment" value="creditcard"  type="radio" />신용카드</label><br>
+                <label><input name="payment" value="bankbook" type="radio" />무통장입금</label>
+                <input class="cost-btn" type="submit" value="주문하기"/>
+            </form>
+        </div>
+    </div>
+
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+</script>
+</body>
+</html>
