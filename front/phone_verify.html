@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>휴대전화인증서비스</title>
+    <link rel="shortcut icon" type="image/x-icon" href="media/imgs/main/retropouch.ico">
+    <link rel="stylesheet" href="css/resetcss.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Do Hyeon';
+        }
+        .hidden {
+            display: none;
+            z-index: -9999;
+            overflow: hidden;
+        }
+        .verfiy-container {
+            width: 100%;
+        }
+
+        .verfiy-form {
+            width: 400px;
+            margin: 30px auto;
+        }
+
+        .user-info_box, .security_box{
+            padding: 20px 10px;
+            background: rgb(250,249,254);
+            border: 2px solid rgb(231,231,231);
+        }
+
+        .security_box {
+            margin-top: 20px;
+        }
+        .row {
+            width: 100%; height: 44px;
+            padding: 3px 0;
+        }
+
+        .row>label {
+            display: inline-block;
+        }
+
+        .row>label>.row_span {
+            display: inline-block;
+            width: 80px;
+        }
+        .row .text_input {
+            padding: 10px 15px;
+            font-size: 15px;
+        }
+
+        .input_name, .input_phone {
+            width: 200px;
+        }
+        .input_birth {
+            width: 116px;
+        }
+        .row>label>.row_sex {
+            display: inline-block;
+            padding: 11px;
+            background: #fff;
+            border: 1px solid rgb(231,231,231);
+            cursor: pointer;
+        }
+
+        .infocap {
+            width: 100%; height: 100px;
+             background: #444444;
+        }
+        .agreement {
+            width: 100%; height: 50px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .agreement>ul>li {
+            display: inline-block;
+            width: 150px;
+            font-size: 10px;
+            margin-right: 30px;
+        }
+
+        .agreement li input {
+            vertical-align: middle;
+        }
+
+        .btn_box {
+            width: 100%; height: 50px;
+            margin: 10px 0;
+        }
+
+        .btn_box .btn {
+            padding: 10px;
+            font-size: 15px;
+            border: 1px solid rgb(231,231,231);
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .btn_box .btn.cancel {
+            width: 100px;
+            margin-left: 20px;
+        }
+        .btn_box .btn.comfirm {
+            width: 250px;
+            background: rgb(182,158,156);
+        }
+    </style>
+</head>
+<body>
+<main class="main-container">
+    <div class="verfiy-container">
+        <form class="verfiy-form">
+            <fieldset>
+                <legend class="hidden">휴대전화인증하기</legend>
+                <div class="user-info_box">
+                    <p class="row">
+                        <label><span class="row_span">이름</span><input class="input_name text_input" type="text" autocomplete="off" name="name" placeholder="이름"/></label>
+                    </p>
+                    <p class="row">
+                        <label><span class="row_span">생년월일</span><input type="text" class="input_birth text_input" name="birthdate" maxlength="8" placeholder="ex.19800101" autocomplete="off"/></label>
+                        <label><span class="row_sex">남</span><input type="radio" class="hidden" name="sex" value="M"></label>
+                        <label><span class="row_sex">여</span><input type="radio" class="hidden" name="sex" value="F"></label>
+                    </p>
+                    <p class="row">
+                        <label><span class="row_span">휴대전화</span><input type="text" class="input_phone text_input" name="phone" placeholder="'-'제외하고 숫자만입력" maxlength="11" autocomplete="off"></label>
+                    </p>
+                </div>
+                <div class="security_box">
+                    <div class="infocap"></div>
+                    <div class="agreement">
+                        <ul>
+                            <li><label><input type="checkbox">개인정보이용동의</label></li>
+                            <li><label><input type="checkbox">고유식별정보처리동의</label></li>
+                            <li><label><input type="checkbox">서비스이용약관동의</label></li>
+                            <li><label><input type="checkbox">통신사이용동의</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn_box">
+                    <input class="cancel btn" type="button" value="취소">
+                    <input class="comfirm btn" type="submit" value="확인">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</main>
+<script src="js/jquery.min.js"></script>
+<script>
+    $cancel_btn = $('.cancel.btn'),
+    $gender_btn = $('.row_sex');
+
+    $cancel_btn.on("click", function () {
+        window.close();
+    });
+
+    $gender_btn.on("click", function () {
+        $gender_btn.css("background", "white");
+        if($(this).text() == "남") {
+            $(this).css("background","rgba(26,115,232,0.3)");
+        } else {
+            $(this).css("background","rgba(241,127,118,0.5)");
+        }
+    });
+</script>
+</body>
+</html>
