@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RetroPouch</title>
+    <link rel="shortcut icon" type="image/x-icon" href="media/imgs/main/retropouch.ico">
+    <link rel="stylesheet" href="css/retropouch_header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .background-container {
+            width: 100%;
+        }
+        .background {
+            width: 100%; height: 110vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .background.first {
+            background-image: url("media/imgs/background/backgound2.jpg");
+        }
+        .background.second {
+            background-image: url("media/imgs/background/background.jpg");
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <header class="header-container layout-header">
+            <h1 class="hidden">나의 오랜 화장품 보관소 : Retro Pouch</h1>
+            <dl class="rp-menubar layout-menubar">
+                <dt class="hidden">Retro Pouch Logo</dt>
+                <dd class="rp-menubar_logo rp-menu"><a href="index.html"><img src="media/imgs/main/logo.svg"></a></dd>
+                <dt class="hidden">메뉴 버튼</dt>
+                <dd class="rp-menubar_box rp-menu">
+                    <ul class="rp-menubar_menus">
+                        <li class="rp-menubar_menu menu_product"><a href="">PRODUCTS</a></li>
+                    </ul>
+                </dd>
+                <dt class="hidden">로그인 버튼</dt>
+                <dd class="rp-menubar_menu menu_login rp-menu"><a href="login.html">LOGIN</a></dd>
+                <!--<dt class="hidden">유저 정보</dt>
+                <dd class="rp-menubar_menu menu_login menu-user">
+                    <div class="user-btn">nickname</div>
+                    <ul class="user-info_box hidden">
+                        <li><a href="#">마이페이지</a></li>
+                        <li><a href="#">나의 파우치</a></li>
+                        <li><a href="#">로그아웃</a></li>
+                    </ul>
+                </dd>-->
+            </dl>
+        </header>
+        <main class="main-container">
+            <div class="background-container">
+                <ul>
+                    <li class="background first">
+                        <div class="product-wrap"></div>
+                    </li>
+                    <li class="background second"></li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer-container">
+            <div class="quick wrap_inner">
+                <div class="cs">
+                    <h4>CUSTOMER CENTER</h4>
+                    <p class="tel">070-7727-1090</p>
+                    <p>
+                        MON - FRI. 10:00-12:00 (2hours)<br>
+                        SAT.SUN.HOLIDAY CLOSE
+                    </p>
+                </div>
+                <div class="bank">
+                    <h4>BANK INFO</h4>
+
+                    <ul><li>농협개인 317-0021-1767-41 주식회사 버널문</li>
+                    </ul>
+                </div>
+                <div class="exc">
+                    <h4>RETURNS &amp; EXCHANGES</h4>
+                    <dl>
+                        <dt>반품주소</dt>
+                        <dd>서울특별시 강남구 청담동 84-18 , 4층 어페어</dd>
+                    </dl>
+                </div>
+                <div class="about">
+                    <h4>ABOUT</h4>
+                    <ul>
+                        <li><a href="/content/content.php?cont=guide">이용안내</a></li>
+                        <li><a href="/content/content.php?cont=uselaw">이용약관</a></li>
+                        <li><a href="/content/content.php?cont=privacy">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //하단메뉴 -->
+            <div class="shopinfo">
+                <div class="wrap_inner">
+                    <!-- 쇼핑몰정보 및 에스크로 -->
+                    <address class="info">
+                        <span>상호. 주식회사 버널문</span>|
+                        <span>대표. 이성규</span>|
+                        <span>이메일. <a href="mailto:afair_official@naver.com">afair_official@naver.com</a></span>|
+                        <span>전화. 070-7727-1090</span>|
+                        <span>주소. 서울특별시 강남구 영동대로 602 , 6층 C180호 (삼성동)</span>|
+                        <span>반품주소. 서울특별시 강남구 청담동 84-18 , 4층 어페어</span><br>
+                        <span>사업자등록번호. 485-87-01763 <a href="#" onclick="wisaOpen(&quot;http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=4858701763&quot;, &quot;bizinfo&quot;, &quot;false&quot;, &quot;880&quot;, &quot;610&quot;); return false;">(사업자정보확인)</a></span>|
+                        <span>통신판매업신고번호. 제 2020-서울강남-00617 호</span>|
+                        <span>개인정보보호책임자. 개인정보보호책임자<a href="mailto:afair_official@naver.com">(afair_official@naver.com)</a></span>|
+                        <span>호스팅 제공자. (주)위사</span><br>
+                        <span class="pg">고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다. <a href="javascript:goValidEscrow('wp_afair');">(서비스가입사실확인)</a></span>
+                    </address>
+                    <!-- //쇼핑몰정보 및 에스크로 -->
+                    <p class="copyright">(c) <strong>주식회사 버널문</strong>. all right reserved. <strong><a href="http://by.wisa.co.kr/www.afair.co.kr" target="_blank" alt="위사 디자인&amp;호스팅" title="위사 디자인&amp;호스팅">designed &amp; managed by <span class="wisa">WISA.</span></a></strong></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
